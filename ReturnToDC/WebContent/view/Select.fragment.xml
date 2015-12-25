@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns="sap.m">	
+	<SelectDialog id="selectDialog" confirm="onConfirm"
+		 growingThreshold="500" cancel="onCancel" liveChange="handleSearch" search="handleSearch" updateStarted="test">
+	</SelectDialog>	
+</core:FragmentDefinition>

@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<Dialog id="siteSearchDialog" title="Site">
+		<content>
+			<Panel id="panel1" expandable="true" expanded="false"
+				headerText="Advanced Search"
+				expandAnimation="false">
+				<content>
+					<f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+						<f:content>
+							<Label text="Site Code" />
+							<Input id="idSiteCode" placeholder="Enter Site Code"
+								liveChange="lcSite">
+							</Input>
+							<Label text="Site Description" />
+							<Input id="idSiteDesc" placeholder="Enter Site Description"
+								liveChange="lcSite">
+							</Input>
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox alignItems="Start" justifyContent="End">
+						<items>
+							<Button text="Reset" type="Emphasized" press="onSiteReset"
+								class="sapUiSmallMarginEnd1" />
+							<Button text="Search" type="Accept" press="onSiteSearch" />
+						</items>
+					</FlexBox>
+				</content>
+			</Panel>
+			<Panel id="panel2" expandable="false" expanded="true">
+				<content>
+					<List id="lstSite" select="onSiteConfirm" mode="SingleSelectMaster"
+						growingThreshold="500"></List>
+				</content>
+			</Panel>
+		</content>
+		<buttons>
+			<Button text="Cancel" press="onSiteCancel"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

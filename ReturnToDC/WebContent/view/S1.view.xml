@@ -1,0 +1,55 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="ReturnToDC.view.S1" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Return to DC" navButtonPress="navHome" showNavButton="true">
+		<content>
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout"
+				labelSpanL="3" labelSpanM="4" emptySpanL="3" emptySpanM="0" columnsM="2" class="sapUiSmallMarginTop">
+				<f:content>
+				<core:Title text="Supplying From"/>
+					<Label text="Storage Area" required="true"  />
+					<Input valueHelpOnly="true" showValueHelp="true"
+						valueHelpRequest="showSupplySA" id="supplyingStorageArea" placeholder="Select Storage Area" />
+						
+				<core:Title text="Sending To"/>
+					<Label text="Site" required="true"  />
+					<Input valueHelpOnly="true" showValueHelp="true"
+						valueHelpRequest="showReceivingSite" id="receivingSite"  placeholder="Select Site"  />
+
+					<Label text="Storage Area" required="true"  />
+					<Input valueHelpOnly="true" showValueHelp="true"
+						valueHelpRequest="showReceivingSA" id="receivingStorageArea"  placeholder="Select Storage Area"  enabled="false"/>
+				</f:content>
+			</f:SimpleForm>
+			<Table id="oTable" mode="Delete" delete="onDelete" >
+				<headerToolbar>
+					<Toolbar>
+					<ToolbarSpacer/>
+						<Button id="addNewItem" enabled="false" type="Accept" text="Add New Item" icon="sap-icon://add" class="sapUiSmallMarginEnd" press="addNewItem"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column hAlign="Center" >
+						<Text text="Material" />
+					</Column>
+					<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet" >
+						<Text text="Quantity" />
+					</Column>
+					<Column hAlign="Center" width="22%" demandPopin="true" minScreenWidth="Tablet">
+						<Text text="Batch" />
+					</Column>
+				</columns>
+				
+				<items>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Button text="Reset" type="Emphasized" press="onReset" />
+				<Button text="Post" id="post" type="Accept" class="sapUiSmallMarginEnd" enabled= "false" press="onPost" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

@@ -1,0 +1,23 @@
+{
+  "generation": [
+    {
+      "templateId": "ui5template.fioriFullScreen",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Mon, 18 May 2015 09:44:22 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  }
+}

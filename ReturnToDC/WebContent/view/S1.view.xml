@@ -47,6 +47,7 @@
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer />
+				<Button text="Cancel"  press="onCancel" />
 				<Button text="Reset" type="Emphasized" press="onReset" />
 				<Button text="Post" id="post" type="Accept" class="sapUiSmallMarginEnd" enabled= "false" press="onPost" />
 			</Toolbar>
